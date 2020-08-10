@@ -14,6 +14,7 @@ django-admin startproject --template https://github.com/lixulun/djfastapp/archiv
 * 时区默认改为Asia/Shanghai
 * 去掉了csrf中间件
 * ALLOWED_HOSTS不做限制
+* 配置static在非调试环境运行
 
 ## 解释
 
