@@ -19,6 +19,11 @@ from django.conf import settings
 from django.views.static import serve as static_view
 
 urlpatterns = [
-    path(f'{settings.STATIC_URL.lstrip("/")}<path:path>', static_view, dict(document_root=settings.STATIC_ROOT)),
     path('admin/', admin.site.urls),
 ]
+
+if not settings.DEBUG:
+    """
+    static urls register when not debug
+    """
+    urlpatterns = [path(f'{settings.STATIC_URL.lstrip("/")}<path:path>', static_view, dict(document_root=settings.STATIC_ROOT))] + urlpatterns
