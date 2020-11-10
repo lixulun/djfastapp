@@ -18,4 +18,4 @@ django-admin startproject --template https://github.com/lixulun/djfastapp/archiv
 
 ## 解释
 
-* 不关闭时区支持的原因。Django官方推荐[打开时区](https://docs.djangoproject.com/en/2.2/topics/i18n/timezones/#setup)。我的理由是使用官方指导，避免aware/naive datetime对象的混用会避免很多麻烦。方法请[参见文档](https://docs.djangoproject.com/en/2.2/topics/i18n/timezones/)
+* 默认使用时区（USE_TZ=True），这是Django官方推荐的行为。使用django.utils.timezone包代替datetime包，请[参考文档](https://docs.djangoproject.com/en/2.2/topics/i18n/timezones/)
