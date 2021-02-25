@@ -15,6 +15,7 @@ django-admin startproject --template https://github.com/lixulun/djfastapp/archiv
 * 去掉了csrf中间件
 * ALLOWED_HOSTS不做限制
 * 配置static在非调试环境运行
+* 默认语言改从en-us改成zh-Hans
 
 ## 解释
 
